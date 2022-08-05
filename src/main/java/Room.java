@@ -12,4 +12,20 @@ public abstract class Room {
     public int getCapacity() {
         return this.capacity;
     }
+
+    public int guestCount() {
+        return this.guests.size();
+    }
+
+    public void addGuest(Guest guest) {
+        this.guests.add(guest);
+    }
+
+    public void removeGuests() {
+        this.guests.clear();
+    }
+
+    public boolean isGuestInRoom(Guest guest) {
+        return guests.contains(guest);
+    }
 }
